@@ -1,0 +1,163 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>SIGNUP Here</title>
+
+    <link rel="stylesheet" href="./style1.css">
+
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#txtPwd").blur(function () {
+                regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+                name = $("#txtPwd").val();
+                if (name == "") {
+                    $("#txtPwd").val();
+                    $("#err").html("Please Enter Password");
+                }
+                else if (!regex.test(name)) {
+                    $("#txtPwd").focus();
+                    $("#err").html("Please Enter 1 upper, 1 lower, 1 digit, 1 special");
+                }
+                else {
+                    $("#err").html("");
+                    $("#val").html("Valid Password");
+                }
+            });
+
+            $("#txtEmail").blur(function () {
+                regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                ename = $("#txtEmail").val();
+                if (ename == "") {
+                    $("#txtEmail").focus();
+                    $("#err").html("Please Enter email");
+                }
+                else if (!regex.test(ename)) {
+                    $("#txtEmail").focus();
+                    $("#err").html("Please Enter valid email");
+                }
+                else {
+                    $("#err").html("");
+                    $("#val").html("Valid Email");
+                }
+            });
+
+            $("#txtName").blur(function () {
+                var nameu = $("#txtName").val();
+                if (nameu == "") {
+                    $("#txtName").val();
+                    $("#err").html("Please Enter Name");
+                }
+                else if (!/^[a-zA-Z]+$/.test(nameu)) {
+                    $("#txtName").focus();
+                    $("#err").html("Please Enter only Alphabets, digits and _");
+                }
+                else {
+                    $("#err").html("");
+                    $("#val").html("Valid Name");
+                }
+            });
+
+        });
+    </script>
+
+
+</head>
+
+<body> <!-- partial:index.partial.html -->
+
+    <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span>
+
+        <div class="signin">
+
+            <div class="content">
+
+                <h2>Register</h2>
+
+                <div class="form">
+
+                    <div class="inputBox">
+                        <div id="err" class="error"></div>
+                        <div id="val" class="valid"></div>
+                    </div>
+
+                    <div class="inputBox">
+
+                        <input type="text" id="txtEmail" name="txtEmail"> <i>Email</i>
+
+                    </div>
+
+                    <div class="inputBox">
+
+                        <input type="text" id="txtName" name="txtName"> <i>Name</i>
+
+                    </div>
+
+                    <div class="inputBox">
+
+                        <input type="password" id="txtPwd" name="txtPwd"> <i>Password</i>
+
+                    </div>
+
+                    <div class="links"> <a href="#">Have an account?</a> <a href="login.html"> LOG-IN</a>
+
+                    </div>
+
+
+                    <div class="inputBox">
+
+                        <input type="submit" value="SignUp">
+
+                    </div>
+
+                    <div class="links"> <a href="#"></a> <a href="index.html"> Return To Home</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+    </section> <!-- partial -->
+
+</body>
+
+</html>
