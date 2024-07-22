@@ -1,0 +1,135 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>LOG-IN Here</title>
+
+    <link rel="stylesheet" href="./style1.css">
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#Uname").blur(function () {
+                uname1 = $("#Uname").val();
+                if (uname1 == "") {
+                    $("#Uname").val();
+                    $("#err").html("Please Enter UserName");
+                    $("#val").html("");
+                }
+                else if (!/^[a-zA-Z0-9_]+$/.test(uname1)) {
+                    $("#Uname").focus();
+                    $("#err").html("Please Enter only Alphabets, digits and _");
+                    $("#val").html("");
+                }
+                else {
+                    $("#err").html("");
+                    $("#val").html("Valid Username");
+                }
+            });
+
+            $("#Pwd").blur(function () {
+                regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+                name = $("#Pwd").val();
+                if (name == "") {
+                    $("#Pwd").val();
+                    $("#err").html("Please Enter Password");
+                }
+                else if (!regex.test(name)) {
+                    $("#Pwd").focus();
+                    $("#err").html("Please Enter 1 upper, 1 lower, 1 digit, 1 special");
+                }
+                else {
+                    $("#err").html("");
+                    $("#val").html("Valid Password");
+                }
+            });
+
+        });
+    </script>
+
+</head>
+
+<body> <!-- partial:index.partial.html -->
+
+    <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span>
+
+        <div class="signin">
+
+            <div class="content">
+
+                <h2>Sign In</h2>
+
+                <div class="form">
+                    <div class="inputBox">
+                        <div id="err" class="error"></div>
+                        <div id="val" class="valid"></div>
+                    </div>
+
+                    <div class="inputBox">
+
+                        <input type="text" id="Uname" name="Uname"> <i>Username</i>
+
+                    </div>
+
+                    <div class="inputBox">
+
+                        <input type="password" id="Pwd" name="Pwd"> <i>Password</i>
+
+                    </div>
+
+                    <div class="links"> <a href="#">Forgot Password</a> <a href="SIGNUP.HTML">Signup</a>
+
+                    </div>
+
+                    <div class="inputBox">
+
+                        <input type="submit" value="Login">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section> <!-- partial -->
+
+</body>
+
+</html>
